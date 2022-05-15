@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="../../global/photon/dist/css/photon.css">
+    <link rel="stylesheet" href="../../global/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <title> Editar Procedimento</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-3">
+            <nav class="nav-group">
+                <h5 class="nav-group-title">Menu</h5>
+                <a href="../../ViewsAgendamentos/main/index.html" class="nav-group-item pointer  ">
+                    <span class="icon icon-archive"></span>
+                    Agendamentos
+                </a>
+                <a href="../../ViewsClientes/clientes/index.html" class="nav-group-item pointer">
+                    <span class="icon icon-user"></span>
+                    Clientes
+                </a>
+                <a href="../../ViewsProcedimentos/procedimentos/index.html" class="nav-group-item pointer active">
+                    <span class="icon icon-clipboard"></span>
+                    Procedimentos
+                </a>
+            </nav>
+        </div>
+        <div class="col-8">
+            <div class="form-group">
+                <label>Nome</label>
+                <input type="text" class="form-control" placeholder="Nome" id="nome">
+            </div>
+            <div class="form-group">
+                <label>Descrição</label>
+                <input type="text" class="form-control" placeholder="Descrição" id="descrição">
+            </div>
+            <label>Tipo</label>
+            <select class="form-control" id="tipo">
+                <option>Exame</option>
+                <option>Consulta</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <footer class="toolbar toolbar-footer rodape">
+                <div class="toolbar-actions">
+                        <div class="col-12 btnSalvar center">
+                            <button class="btn btn-mini btn-positive" onclick="editar()">
+                                Editar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="./render.js"></script>
+</body>
+
+</html>

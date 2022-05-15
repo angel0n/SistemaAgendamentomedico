@@ -1,0 +1,19 @@
+{
+  "name": "sistema_consulta",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "teste": "node main.js",
+    "start": "electron .",
+    "package-win": "electron-packager . --platform=win32  --archi=ia32 --icon=C:/Users/angel/Documents/Dev/testes/electronjs/sistema Consulta/src/icons/icons.ico"
+  },
+  "dependencies": {
+    "electron": "^18.2.3",
+    "electron-package": "^0.1.0",
+    "sequelize": "^6.19.0",
+    "sqlite": "^4.1.1",
+    "sqlite3": "^5.0.8",
+    "sweetalert2": "^11.4.14"
+  }
+}

@@ -1,0 +1,21 @@
+.rodape{
+    position: absolute;
+	bottom: 0;
+    width: 100%;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.spacer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
