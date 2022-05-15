@@ -1,6 +1,6 @@
 const {app, BrowserWindow, Menu} = require('electron')
 const path = require('path')
-
+const templateMenuVazio = require('./menuBar')
 require('./src/services/ControlerIpcMain')
 
 function createWindow(){
@@ -32,4 +32,5 @@ app.on('window-all-closed', function () {
     if (process.platform !== 'darwin') app.quit()
 })
 
-
+const menu = Menu.buildFromTemplate(templateMenuVazio)
+Menu.setApplicationMenu(menu)

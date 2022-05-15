@@ -60,5 +60,6 @@ const templateMenu = [
         ]
     }*/
 ]
+const templateMenuVazio=[]
 
-module.exports = templateMenu
+module.exports = templateMenuVazio
