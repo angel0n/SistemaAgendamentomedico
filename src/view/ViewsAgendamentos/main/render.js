@@ -1,8 +1,6 @@
 const {ipcRenderer} = require('electron')
+const Swal = require('sweetalert2')
 
-function excluir(data){
-    console.log(data);
-}
 
 ipcRenderer.invoke('getAgendamentos').then((results) => {
     const table = document.getElementById('corpoTable')
@@ -19,3 +17,49 @@ ipcRenderer.invoke('getAgendamentos').then((results) => {
                             </tr>`;
     })
 })
+
+
+function criar() {
+    window.location.href = "../newAgendamento/index.html"
+  }
+  
+  function editar() {
+    Swal.fire({
+      title: 'Editar um Agendamento',
+      input: 'number',
+      inputAttributes: {
+        autocapitalize: 'off'
+      },
+      showCancelButton: true,
+      confirmButtonText: 'Confirmar',
+      showLoaderOnConfirm: true,
+      preConfirm: (login) => {
+        localStorage.setItem('edtagen', login)
+        window.location.href = "../editarAgendamento/index.html";
+      },
+      allowOutsideClick: () => !Swal.isLoading()
+    })
+  }
+  
+  function excluir() {
+    Swal.fire({
+      title: 'Deletar um Agendamento',
+      input: 'number',
+      inputAttributes: {
+        autocapitalize: 'off'
+      },
+      showCancelButton: true,
+      confirmButtonText: 'Confirmar',
+      showLoaderOnConfirm: true,
+      preConfirm: (login) => {
+        ipcRenderer.invoke('deleteAgendamento', login).then(result => {
+          if (result) {
+            Swal.fire('Deletado com sucesso')
+          } else {
+            Swal.fire('Falha ao Deletar')
+          }
+        })
+      },
+      allowOutsideClick: () => !Swal.isLoading()
+    })
+  }

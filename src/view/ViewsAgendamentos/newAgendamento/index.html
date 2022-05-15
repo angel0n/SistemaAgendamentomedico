@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="../../global/photon/dist/css/photon.css">
+    <link rel="stylesheet" href="../../global/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <title> Novo Cliente</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-3">
+            <nav class="nav-group">
+                <h5 class="nav-group-title">Menu</h5>
+                <a href="../../ViewsAgendamentos/main/index.html" class="nav-group-item pointer  ">
+                    <span class="icon icon-archive"></span>
+                    Agendamentos
+                </a>
+                <a href="../../ViewsClientes/clientes/index.html" class="nav-group-item pointer">
+                    <span class="icon icon-user"></span>
+                    Clientes
+                </a>
+                <a href="../../ViewsProcedimentos/procedimentos/index.html" class="nav-group-item pointer active">
+                    <span class="icon icon-clipboard"></span>
+                    Procedimentos
+                </a>
+            </nav>
+        </div>
+        <div class="col-8">
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label>Paciente</label>
+                        <input type="text" class="form-control" placeholder="Paciente" id="paciente">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <label>data</label>
+                        <input type="date" class="form-control" placeholder="Data" id="data">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label>Hora</label>
+                        <input type="time" class="form-control" placeholder="Hora" id="hora">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label>Procedimento</label>
+                        <select class="form-control" id="procedimento">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label>Responsavel</label>
+                        <input type="text" class="form-control" placeholder="Responsavel" id="responsavel">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label>Valor</label>
+                        <input type="number" class="form-control" placeholder="Valor" id="valor">
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <footer class="toolbar toolbar-footer rodape">
+                <div class="toolbar-actions">
+                        <div class="col-12 btnSalvar center">
+                            <button class="btn btn-mini btn-positive" onclick="salvar()">
+                                Salvar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="./render.js"></script>
+</body>
+
+</html>

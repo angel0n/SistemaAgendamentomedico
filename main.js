@@ -1,6 +1,5 @@
 const {app, BrowserWindow, Menu} = require('electron')
 const path = require('path')
-const templateMenu = require('./menuBar')
 
 require('./src/services/ControlerIpcMain')
 
@@ -17,7 +16,7 @@ function createWindow(){
     const mainPath = path.join(__dirname, 'src','view','ViewsAgendamentos','main','index.html')
     mainWindow.loadFile(mainPath)
     // Open the DevTools.
-   mainWindow.webContents.openDevTools()
+   //mainWindow.webContents.openDevTools()
 }
 
 app.whenReady().then(() => {
@@ -34,5 +33,3 @@ app.on('window-all-closed', function () {
 })
 
 
-const menu = Menu.buildFromTemplate(templateMenu)
-Menu.setApplicationMenu(menu)
